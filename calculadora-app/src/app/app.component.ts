@@ -7,23 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   titulo = 'Aplicacion Calculadora-app Angular';
-  operandoA:number;
-  operandoB:number;
-  resultado;number;
 
-  onSumar():void{
-    this.resultado = this.operandoA + this.operandoB;
+  resultadoPadre; number;
+
+  // tslint:disable-next-line: typedef
+  onResultado(resultado: number){
+    this.resultadoPadre = resultado;
   }
 
-  onRestar():void{
-    this.resultado = this.operandoA - this.operandoB;
-  }
-
-  onMultiplicar():void{
-    this.resultado = this.operandoA * this.operandoB;
-  }
-
-  onDividir():void{
-    this.resultado = this.operandoA / this.operandoB;
-  }
 }
